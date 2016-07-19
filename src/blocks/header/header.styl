@@ -1,0 +1,64 @@
+.header
+  background white
+  border-bottom solid 1px header-hr
+.menu
+  display flex
+  flex-flow row nowrap
+
+.menu__item
+  position relative
+
+.breadcrumb:after
+  content "/"
+  padding 0 10px
+  color header-sep
+
+.trigger_list
+  display none
+  position absolute
+  top 15px
+  right 0
+
+.trigger_active
+  align-items flex-end
+  display flex
+  flex-flow column nowrap
+
+.logo
+  align-items center
+  display flex
+  flex-flow row nowrap
+
+.logo__img
+  height 74px
+  margin 15px
+  width 74px
+
+.logo__text
+  color black
+  font-family font_family
+  font-size 31px
+  font-weight 700
+
+.logo__text_c
+  font-weight 400
+
+.logo__text_o
+  font-weight 300
+
+.account
+  align-items center
+  display flex
+  flex-flow row nowrap
+
+.shop-cart
+  margin-left 20px
+
+.shop-cart__icon
+  sprite($sprite_icon-chart)
+
+.shop-cart__total
+  color brown
+  font-family font_family
+  font-size 20px
+  font-weight 700

@@ -1,0 +1,30 @@
+header.header
+  .wrapper.wrapper_header
+    ul.list.menu
+      li.breadcrumb
+        a.link.link_menu(href="") Check out
+      li.breadcrumb
+        a.link.link_menu(href="") Log in
+      li.breadcrumb
+        a.link.link_menu(href="") Register
+      li
+        a.link.link_menu(href="") Contact
+    .logo
+      img.logo__img(src="../img/logo.png")
+      .logo__text Cosmeti<span class="logo__text_c">c</span><span class="logo__text_o">o</span>
+    div.account
+      ul.list.menu
+        li.breadcrumb
+          a.link.link_menu(href="") My wishlist ( <span class="wishlist-cointer">0</span> )
+        li.menu__item
+          a.link.link_menu.trigger(href="") USD
+          ul.list.trigger_list
+            li
+              a.link.link_menu(href="") EURO
+            li
+              a.link.link_menu(href="") RUB
+            li
+              a.link.link_menu(href="") COINS
+      .shop-cart
+        .shop-cart__icon
+        .shop-cart__total $<span class="total-cointer">0.00</span>
