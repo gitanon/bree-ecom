@@ -1,0 +1,36 @@
+.products_wrap
+  display flex
+  flex-flow row nowrap
+  margin 20px 0
+  justify-content space-between
+
+.product
+  align-items center
+  border-right solid 1px product-sep
+  display flex
+  flex-flow column nowrap
+
+// Every fouth product hasn't border-right
+.product:nth-child(4)
+  border-right 0
+
+.product__image
+  margin 0 20px
+
+.product__title
+  color product-title
+  font-family font_family
+  font-size 16px
+  font-weight 700
+
+.product__description
+  color product-text
+  font-family font_family
+  font-size 13px
+  font-weight 400
+
+.product__price
+  color brown
+  font-family font_family
+  font-size 18px
+  font-weight 700

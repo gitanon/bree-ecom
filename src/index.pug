@@ -11,16 +11,23 @@ head
 body.page
   include blocks/header/header.pug
   include blocks/slider/slider.pug
+  include blocks/products/products.pug
   include blocks/email/email.pug
   include blocks/footer/footer.pug
   script(src="js/main.js")
   script(src="//code.jquery.com/jquery-1.11.0.min.js")
   script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+  script(src="//code.jquery.com/ui/1.12.0/jquery-ui.js")
   script(src="js/slick.min.js")
   script.
     $(document).ready(function(){
       $('.single-item').slick({
         arrows: false,
         dots: true
+      });
+      $('#tabs').tabs();
+      $('.link_products').click(function(){
+        $('.link_products').removeClass('.link_products-active');
+        $(this).addClass('.link_products-active');
       });
     });
