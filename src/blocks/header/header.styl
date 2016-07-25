@@ -2,16 +2,33 @@
   background white
   border-bottom solid 1px header-hr
 
-.trigger_list
-  display none
-  position absolute
-  top 15px
-  right 0
+.trigger
+  position relative
 
-.trigger_active
+.trigger::after,
+.trigger:after
+  content ""
+  border-left 3px solid transparent
+  border-right 3px solid transparent
+  border-top 3px solid header-text
+  font-size 0
+  height 0
+  right -9px
+  line-height 0
+  position absolute
+  top 6px
+  width 0
+
+.trigger_list
   align-items flex-end
   display flex
   flex-flow column nowrap
+  position absolute
+  top 18px
+  right 0
+
+.trigger_list
+  display none
 
 .logo
   align-items center
