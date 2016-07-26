@@ -1,0 +1,30 @@
+.link_category
+  color menu-text
+  font-family font_family
+  font-size 14px
+  font-weight 700
+  margin-right 40px
+
+.link_category:hover
+  color yellow
+  text-decoration none
+
+.link_category-active
+  position relative
+
+.link_category-active:hover
+  color menu-text
+
+.link_category-active::after,
+.link_category-active:after
+  background white
+  border-radius 50%
+  bottom -25px
+  // box-shadow 0 4px 0 pale
+  content ""
+  height 16px
+  left 50%
+  margin-left -8px
+  position absolute
+  width 16px
+  z-index 1
