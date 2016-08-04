@@ -16,17 +16,37 @@
   flex-flow row nowrap
   margin-top 15px
 
-.social__item
-  margin-right 5px
+.fb::after,
+.fb:after
+  sprite($sprite_icon_fb)
+  content ""
+  position absolute
+  margin-left -($sprite_icon_fb_width/2)
+  top ($sprite_icon_fb_height/1.5)
 
-.fb
-  sprite($sprite_icon-fb)
-.tw
-  sprite($sprite_icon-tw)
-.hz
-  sprite($sprite_icon-hz)
-.rss
-  sprite($sprite_icon-rss)
+.tw::after,
+.tw:after
+  sprite($sprite_icon_tw)
+  content ""
+  position absolute
+  margin-left -($sprite_icon_tw_width/2)
+  top ($sprite_icon_tw_height/1.5)
+
+.hz::after,
+.hz:after
+  sprite($sprite_icon_hz)
+  content ""
+  margin-left -($sprite_icon_hz_width/2)
+  position absolute
+  top ($sprite_icon_hz_height/1.5)
+
+.rss::after,
+.rss:after
+  sprite($sprite_icon_rss)
+  content ""
+  margin-left -($sprite_icon_rss_width/2)
+  position absolute
+  top ($sprite_icon_rss_height/1.5)
 
 .copyright
   color footer-text
