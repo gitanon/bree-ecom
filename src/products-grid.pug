@@ -5,6 +5,7 @@ head
   meta(http-equiv="X-UA-Compatible" content="IE=Edge")
   title Cosmetico | Products Grid
   link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway:200,400,500,700,800')
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
   link(rel="stylesheet", href="css/main.css")
 body.page
   include blocks/header/header.pug
@@ -14,7 +15,7 @@ body.page
   include blocks/footer/footer.pug
   script(src="//code.jquery.com/jquery-1.11.0.min.js")
   //- script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
-  //- script(src="//code.jquery.com/ui/1.12.0/jquery-ui.js")
+  script(src="//code.jquery.com/ui/1.12.0/jquery-ui.js")
   script.
     $(document).ready(function () {
       $('.link_products-grid').click(function (event) {
@@ -28,4 +29,23 @@ body.page
       $('.trigger').click(function(){
         $('.trigger_list').toggle();
       });
+    });
+  script.
+    $( function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 100,
+        max: 1000,
+        values: [ 100, 700 ],
+        stop: function(event, ui) {
+          $("input#minCost").val($("#slider-range").slider("values",0));
+          $("input#maxCost").val($("#slider-range").slider("values",1));
+        },
+        slide: function(event, ui){
+          $("input#minCost").val($("#slider-range").slider("values",0));
+          $("input#maxCost").val($("#slider-range").slider("values",1));
+        }
+      });
+      $("input#minCost").val($("#slider-range").slider("values",0)); 
+      $("input#maxCost").val($("#slider-range").slider("values",1)); 
     });

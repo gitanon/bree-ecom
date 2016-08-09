@@ -158,6 +158,16 @@ section.products-grid
             a.link.link_menu(href="") 150 ml
           li.list__item_products-grid_simple
             a.link.link_menu(href="") 200 ml
+      ul.list.list_products-grid
+        a.link.link_products-grid.list_products-grid_title(href="") Price from - to
+        #slider-range
+        .products-grid_wrap
+          div
+            span.currency.products-grid__cost $
+            input(class="products-grid__cost" type="text" id="minCost")
+          div
+            span.currency.products-grid__cost $
+            input(class="products-grid__cost" type="text" id="maxCost")
     .products-grid__content.products-grid__content_grid
       .products-grid__banner
         .products-grid__banner-title FACE
