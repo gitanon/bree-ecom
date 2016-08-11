@@ -17,15 +17,14 @@ header.header
         li.breadcrumb_header
           a.link.link_menu(href="") My wishlist ( <span class="wishlist-cointer">0</span> )
         li.menu__item
-          a.link.link_menu.trigger(href="#") USD
-          ul.list.trigger_list.trigger_list-none
-            li
-              a.link.link_menu(href="") EURO
-            li
-              a.link.link_menu(href="") RUB
+          form.form_currency
+            select.trigger(name="currency" id="currency")
+              option(value="$") USD
+              option(value="€") EUR
+              option(value="£") GBR
       .shop-cart
         .shop-cart__icon
-        .shop-cart__total $<span class="total-cointer">0.00</span>
+        .shop-cart__total <span class="currency">$</span><span class="total-cointer">0.00</span>
 .category
   .wrapper.wrapper_category
     ul.list.menu

@@ -1,16 +1,25 @@
 .trigger
-  position relative
+  appearance none
+  border none
+  color header-text
+  font-family font_family
+  font-size 13px
+  font-weight 400
 
-.trigger::after,
-.trigger:after
+.trigger:hover
+  text-decoration underline
+  cursor pointer
+
+.form_currency::after,
+.form_currency:after
   content ""
   border-left 3px solid transparent
   border-right 3px solid transparent
   border-top 3px solid header-text
   font-size 0
   height 0
-  right -9px
+  right -3px
   line-height 0
   position absolute
-  top 6px
+  top 10px
   width 0

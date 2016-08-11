@@ -14,14 +14,14 @@ body.page
   include blocks/email/email.pug
   include blocks/footer/footer.pug
   script(src="//code.jquery.com/jquery-1.11.0.min.js")
-  script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
   script(src="//code.jquery.com/ui/1.12.0/jquery-ui.js")
   script.
       $(function() {
         var spinner = $(".products-list__quanity").spinner();
       });
       $(".products-list_delete_item").click(function() {
-        $("tr").remove();
+        $(this).closest('.products-list__item').remove();
+        event.preventDefault();
       });
 
       $(document).ready(function() {

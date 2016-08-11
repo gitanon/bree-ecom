@@ -15,17 +15,21 @@ body.page
   include blocks/email/email.pug
   include blocks/footer/footer.pug
   script(src="//code.jquery.com/jquery-1.11.0.min.js")
-  script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
   script(src="//code.jquery.com/ui/1.12.0/jquery-ui.js")
   script(src="js/slick.min.js")
   script.
     $(document).ready(function(){
-      $('.trigger').click(function(){
-        $('.trigger_list').toggle();
+      $('select#currency').change(function () {
+        console.log($('select#currency').val());
+        $('.currency').text($('select#currency').val());
       });
       $('.single-item').slick({
-        arrows: false,
-        dots: true
+        arrows: true,
+        dots: true,
+        infinite: true,
+        speed: 300,
+        autoplay: true,
+        autoplaySpeed: 3000
       });
       $('#tabs').tabs({active: 0});
     });
