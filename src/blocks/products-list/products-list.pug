@@ -1,0 +1,47 @@
+section.products-list
+  table.wrapper.products-list__table
+    thead
+      tr.products-list__item
+        td.products-list__title Preview
+        td.products-list__title Product
+        td.products-list__title Quanity
+        td.products-list__title Price
+        td
+    tbody
+      tr.products-list__item
+        td.products-list__product-image
+          img(src="img/products-list.jpg")
+        td
+          .products-list__product-title PRODUCT 1
+          .products-list__product-description Soft Clean Silky Hydrating Lotion
+          .products-list__product-code Product code: <span class="products-list__code_number">2221</span>
+        td
+          //- label(for="spinner")
+          input.products-list__quanity(name="quantity" min="1")
+        td
+          .products-list__product-price
+            <span class="currency">$</span><span class="products-list__product-value">112.00</span>
+        td
+          a.link.products-list_delete_item(href="") X
+      tr.products-list__item
+        td.products-list__product-image
+          img(src="img/products-list.jpg")
+        td
+          .products-list__product-title PRODUCT 2
+          .products-list__product-description Soft Clean Silky Hydrating Lotion
+          .products-list__product-code Product code: <span class="products-list__code_number">2221</span>
+        td
+          //- label(for="spinner")
+          input.products-list__quanity(name="quantity" min="1")
+        td
+          .products-list__product-price
+            <span class="currency">$</span><span class="products-list__product-value">112.00</span>
+        td
+          a.link.products-list_delete_item(href="") X
+  .wrapper
+    .products-list_right
+      .products-list__product-price_total Total price 
+        <span class="currency">$</span><span class="products-list__product-value_total">0</span>
+    .products-list_right
+      a.link.products-list__button.products-list__button_continue-shopping(href="") CONTINUE SHOPPING
+      a.link.products-list__button.products-list__button_continue(href="") CONTINUE

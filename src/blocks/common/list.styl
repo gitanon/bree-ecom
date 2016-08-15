@@ -1,0 +1,50 @@
+.list
+  list-style none
+  margin 0
+  padding 0
+
+.list_products-grid
+  border-bottom solid 1px product-sep
+  margin-right 15px
+  padding-bottom 15px
+  position relative
+
+.list_products-grid_title
+  display block
+  padding 15px 15px 0 20px
+
+.list_products-grid_title::before,
+.list_products-grid_title:before
+  sprite($sprite_list_products_grid_title)
+  content ""
+  left -5px
+  position absolute
+
+.list__sublist_products-grid
+  display none
+
+.list__item_products-grid
+  margin-left 20px
+  padding 5px 0
+  position relative
+
+.list__item_products-grid_simple
+  margin-left 20px
+  padding 3px 0
+
+.list__item_products-grid_before::before,
+.list__item_products-grid_before:before
+  sprite($sprite_list__item)
+  content ""
+  left -20px
+  position absolute
+  top 14px
+
+.list__item_products-grid_sublist
+  color product-text
+  font-family font_family
+  font-size 13px
+  font-weight 400
+  list-style "- "
+  margin 10px
+  

@@ -1,0 +1,111 @@
+.products_wrap
+  display flex
+  flex-flow row wrap
+  margin 5px 0
+  justify-content center
+
+.product
+  align-items center
+  border-right solid 1px product-sep
+  box-sizing border-box
+  display flex
+  flex-flow column nowrap
+  margin 15px 0
+
+// Every fouth product hasn't border-right
+.product:nth-child(4n)
+  border-right 0
+
+.product__label
+  position relative
+
+.product__label::before,
+.product__label:before,
+.product__label-2::after,
+.product__label-2:after
+  border-radius 50%
+  color white
+  font-family font_family
+  font-size 7px
+  font-weight 700
+  height 24px
+  line-height 24px
+  position absolute
+  right 29px
+  text-align center
+  top -10px
+  width 24px
+
+.product__label_best::before,
+.product__label_best:before,
+.product__label-2_best::after,
+.product__label-2_best:after
+  background black
+  content "BEST"
+
+.product__label_new::before,
+.product__label_new:before,
+.product__label-2_new::after,
+.product__label-2_new:after
+  background yellow
+  content "NEW"
+
+.product__label_hot::before,
+.product__label_hot:before,
+.product__label-2_hot::after,
+.product__label-2_hot:after
+  background red
+  content "HOT" 
+
+.product__label-2_best::after,
+.product__label-2_best:after,
+.product__label-2_new::after,
+.product__label-2_new:after,
+.product__label-2_hot::after,
+.product__label-2_hot:after
+  right 54px
+
+.product__image
+  margin 0 18px
+
+.product__title
+  color product-title
+  font-family font_family
+  font-size 16px
+  font-weight 700
+  margin-top 20px
+
+.product__description
+  color product-text
+  font-family font_family
+  font-size 13px
+  font-weight 400
+  margin-top 5px
+
+.product__price
+  color brown
+  font-family font_family
+  font-size 18px
+  font-weight 700
+  margin-bottom 25px
+  margin-top 5px
+
+.ui-tabs-active
+  color product-active
+
+.ui-tabs-active:hover
+  color product-active
+
+.ui-tabs-active::after,
+.ui-tabs-active:after
+  background white
+  border-radius 50%
+  bottom -16px
+  box-shadow 0 4px 0 product-hr
+  content ""
+  height 16px
+  left 50%
+  margin-left -8px
+  position absolute
+  width 16px
+  z-index 1

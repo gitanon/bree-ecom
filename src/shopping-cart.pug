@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+  title Cosmetico | Shoppint card
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway:200,400,500,700,800')
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css")
+  link(rel="stylesheet", href="css/main.css")
+body.page
+  include blocks/header/header.pug
+  include blocks/submenu/submenu.pug
+  include blocks/products-list/products-list.pug
+  include blocks/email/email.pug
+  include blocks/footer/footer.pug
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js")
+  script.
+      $(function() {
+        var spinner = $(".products-list__quanity").spinner();
+      });
+      $(".products-list_delete_item").click(function() {
+        $(this).closest('.products-list__item').remove();
+        event.preventDefault();
+      });
+
+      $(document).ready(function() {
+        update_amounts();
+        $('.products-list__quanity').change(function() {
+          update_amounts();
+        });
+      });
+
+      function update_amounts() {
+        var sum = 0.0;
+        $('.products-list__item').each(function() {
+          var qty = $(this).find('.products-list__quanity').attr('aria-valuenow');
+          var price = $(this).find('.products-list__product-value').val();
+          var amount = (qty * price);
+          sum += amount;
+          $(this).find('.amount').text('' + amount);
+        });
+        //just update the total to sum  
+        $('.products-list__product-value_total').text(sum);
+      }

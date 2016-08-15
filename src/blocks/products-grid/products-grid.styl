@@ -1,0 +1,112 @@
+.products-grid
+  padding-top 30px
+
+.products-grid_wrap
+  display flex
+  flex-flow row nowrap
+  justify-content space-between
+
+.products-grid__sidebar
+  border-right solid 1px product-sep
+  width 235px
+
+.products-grid__content
+  display flex
+  flex-flow row wrap
+  justify-content center
+
+.products-grid__content .product:nth-child(4n)
+  border-right solid 1px product-sep
+.products-grid__content .product:nth-child(3n+1)
+  border-right 0
+
+.products-grid__banner
+  background url("../img/products-grid__banner-bg.jpg")
+  height 150px
+  margin-left 15px
+  margin-bottom 15px
+  width 721px
+
+.products-grid__banner-title
+  color brown
+  display inline-block
+  font-family font_family
+  font-size 48px
+  font-weight 38px
+  margin 50px 40px
+
+.products-grid__banner-description
+  color brown
+  display inline-block
+  font-family font_family
+  font-size 18px
+  font-weight 300
+  width 230px
+
+.products-grid__cost
+  border none
+  color header-text
+  font-family font_family
+  font-size 13px
+  font-weight 400
+  width 30px
+
+//  Контейнер слайдера 
+.ui-slider
+  position relative
+  margin-top 20px
+  margin-bottom 10px
+
+// Ползунок 
+.ui-slider .ui-slider-handle
+  border none
+  background brown
+  position absolute
+  z-index 2
+  width 5px
+  height 15px
+  cursor pointer
+
+.ui-slider .ui-slider-range
+  position absolute
+  z-index 1
+  font-size .7em
+  display block
+  border 0
+  overflow hidden
+
+// горизонтальный слайдер (сама полоса по которой бегает ползунок) 
+.ui-slider-horizontal
+   height 3px
+
+// позиционируем ползунки 
+.ui-slider-horizontal .ui-slider-handle 
+  top -6px
+  margin-left -3px
+
+.ui-slider-horizontal .ui-slider-range
+  top 0
+  height 100%
+
+.ui-slider-horizontal .ui-slider-range-min 
+  left 0
+
+.ui-slider-horizontal .ui-slider-range-max
+  right 0
+
+// оформление полосы по которой ходит ползунок
+#slider-range.ui-widget-content 
+  border none
+  background pale
+
+.ui-widget.ui-widget-content 
+  border none
+
+// оформление активного участка (между двумя ползунками)
+#slider-range .ui-widget-header 
+  border none
+  background yellow
+
+// скругление для полосы слайдера 
+.ui-corner-all
+  border none
