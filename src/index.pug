@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 html(lang="en")
-head
-  meta(charset="UTF-8")
-  meta(http-equiv="X-UA-Compatible" content="IE=Edge")
-  title Cosmetico
-  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway:200,400,500,700,800')
-  link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
-  link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
-  link(rel="stylesheet", href="css/main.css")
-body.page
-  include blocks/header/header.pug
-  include blocks/slider/slider.pug
-  include blocks/products/products.pug
-  include blocks/email/email.pug
-  include blocks/footer/footer.pug
-  script(src="//code.jquery.com/jquery-1.11.0.min.js")
-  script(src="//code.jquery.com/ui/1.12.0/jquery-ui.js")
-  script(src="js/slick.min.js")
-  script.
-    $(document).ready(function(){
-      $('select#currency').change(function () {
-        console.log($('select#currency').val());
-        $('.currency').text($('select#currency').val());
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+    title Cosmetico
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway:200,400,500,700,800')
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css")
+    link(rel="stylesheet", href="css/main.css")
+  body.page
+    include blocks/header/header.pug
+    include blocks/slider/slider.pug
+    include blocks/products/products.pug
+    include blocks/email/email.pug
+    include blocks/footer/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js")
+    script.
+      $(document).ready(function(){
+        $('select#currency').change(function () {
+          console.log($('select#currency').val());
+          $('.currency').text($('select#currency').val());
+        });
+        $('.single-item').slick({
+          arrows: true,
+          dots: true,
+          infinite: true,
+          speed: 300,
+          autoplay: true,
+          autoplaySpeed: 3000
+        });
+        $('#tabs').tabs({active: 0});
       });
-      $('.single-item').slick({
-        arrows: true,
-        dots: true,
-        infinite: true,
-        speed: 300,
-        autoplay: true,
-        autoplaySpeed: 3000
-      });
-      $('#tabs').tabs({active: 0});
-    });
